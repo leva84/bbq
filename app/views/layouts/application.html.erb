@@ -37,8 +37,8 @@
   <header class="mb-5">
     <div class=" navbar-dark bg-secondary box-shadow">
       <div class="container d-flex justify-content-between">
-        <div class="col-6 float-left">
-          <%= link_to "BBQ!", root_path, class: ' navbar-brand d-flex align-items-center' %>
+        <div class="col-6 float-left font-weight-bold pt-3">
+          <%= link_to t('app.name'), root_path, class: 'navbar-brand d-flex align-items-cente' %>
         </div>
         <div class="col-sm-4 offset-md-1 py-4">
           <ul class="list-unstyled">
@@ -64,7 +64,7 @@
     </div><!--/row-->
 
     <footer>
-      <p>&copy; BBQ! Company 2020</p>
+      <p>&copy; <%= t('app.company') %> 2020</p>
     </footer>
 
   </div> <!-- /container -->
