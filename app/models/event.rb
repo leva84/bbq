@@ -2,6 +2,8 @@ class Event < ApplicationRecord
 
   belongs_to :user
 
+  has_many :comments
+
   validates :user, presence: true
   # Валидируем заголовок, он не может быть длиннее 255 букв
   validates :title, presence: true, length: {maximum: 255}
