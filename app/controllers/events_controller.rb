@@ -37,7 +37,7 @@ class EventsController < ApplicationController
   end
 
   def destroy
-    @event.destroy if set_current_user_event
+    @event.destroy
     redirect_to events_url, notice: I18n.t('controllers.events.destroyed')
   end
 
