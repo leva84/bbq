@@ -28,6 +28,8 @@ module Bbq
     # the framework and any gems in your application.
     config.i18n.default_locale = :ru
 
+    config.i18n.available_locales = :ru
+
     # Don't generate system test files.
     config.generators.system_tests = nil
   end
