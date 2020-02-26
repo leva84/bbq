@@ -4,7 +4,8 @@
   <div class="alert alert-danger">
 
     <h2>
-      <%= I18n.t("errors.messages.not_saved", count: errors.count, resource: @event.title) %>
+      <%= I18n.t("errors.messages.not_saved", count: errors.count,
+                 resource: I18n.t('activerecord.models.event')) %>
     </h2>
 
     <ul>
