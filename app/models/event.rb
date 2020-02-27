@@ -3,6 +3,11 @@ class Event < ApplicationRecord
   belongs_to :user
 
   has_many :comments, dependent: :destroy
+  has_many :subscriptions
+
+  # Чтобы Рельсы понимали, какой именно класс будет лежать
+  # в модели subscribers, надо указать source
+  has_many :subscribers, through: :subscriptions, source: :user
 
   validates :user, presence: true
   # Валидируем заголовок, он не может быть длиннее 255 букв
