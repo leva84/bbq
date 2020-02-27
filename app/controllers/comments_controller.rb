@@ -31,14 +31,18 @@ class CommentsController < ApplicationController
     redirect_to @event, message
   end
 
-  # Use callbacks to share common setup or constraints between actions.
+  private
+
+  def set_event
+    @event = Event.find(params[:event_id])
+  end
+
   # Комментарий будем искать не по всей базе,
   # а у конкретного события
   def set_comment
     @comment = @event.comments.find(params[:id])
   end
 
-  # Only allow a trusted parameter "white list" through.
   def comment_params
     params.require(:comment).permit(:body, :user_name)
   end

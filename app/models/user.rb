@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
   # Юзер может создавать много событий
   has_many :events
-  has_many :comments
+  has_many :comments, dependent: :destroy
 
   # Добавим заодно валидации для юзера
   # Имя не не более 35 символов

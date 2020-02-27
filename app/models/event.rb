@@ -2,7 +2,7 @@ class Event < ApplicationRecord
 
   belongs_to :user
 
-  has_many :comments
+  has_many :comments, dependent: :destroy
 
   validates :user, presence: true
   # Валидируем заголовок, он не может быть длиннее 255 букв
