@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class CommentsController < ApplicationController
-  before_action :set_event, only: [:create, :destroy]
+  before_action :set_event, only: %i[create destroy]
   before_action :set_comment, only: [:destroy]
 
   # POST /comments
@@ -20,12 +22,12 @@ class CommentsController < ApplicationController
 
   # DELETE /comments/1
   def destroy
-    message = {notice: I18n.t('controllers.comments.destroyed')}
+    message = { notice: I18n.t('controllers.comments.destroyed') }
 
     if current_user_can_edit?(@comment)
       @comment.destroy!
     else
-      message = {alert: I18n.t('controllers.comments.error')}
+      message = { alert: I18n.t('controllers.comments.error') }
     end
 
     redirect_to @event, message

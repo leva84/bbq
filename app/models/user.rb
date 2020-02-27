@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -9,7 +11,7 @@ class User < ApplicationRecord
 
   # Добавим заодно валидации для юзера
   # Имя не не более 35 символов
-  validates :name, presence: true, length: {maximum: 35}
+  validates :name, presence: true, length: { maximum: 35 }
 
   before_validation :set_name, on: :create
 
@@ -18,11 +20,11 @@ class User < ApplicationRecord
   private
 
   def set_name
-    self.name = "Товарисч №#{rand(777)}" if self.name.blank?
+    self.name = "Товарисч №#{rand(777)}" if name.blank?
   end
 
   def link_subscriptions
-    Subscription.where(user_id: nil, user_email: self.email)
-        .update_all(user_id: self.id)
+    Subscription.where(user_id: nil, user_email: email)
+                .update_all(user_id: id)
   end
 end

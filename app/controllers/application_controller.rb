@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
@@ -11,13 +13,13 @@ class ApplicationController < ActionController::Base
     user_signed_in? && (
     model.user == current_user ||
         (model.try(:event).present? && model.event.user == current_user)
-    )
+  )
   end
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(
-        :account_update,
-        keys: [:password, :password_confirmation, :current_password]
+      :account_update,
+      keys: %i[password password_confirmation current_password]
     )
   end
 end
