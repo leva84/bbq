@@ -45,7 +45,7 @@ class Subscription < ApplicationRecord
   def email_is_free
     return unless User.find_by_email(user_email)
 
-    errors.add(:user_email, 'ты охуел что ли?!' )
+    errors.add(:user_email, 'уже зарегестрирован такой пользователь' )
   end
 
   def subscription_owner
