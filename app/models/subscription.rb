@@ -16,6 +16,7 @@ class Subscription < ApplicationRecord
   validates :user, uniqueness: { scope: :event_id }, if: -> { user.present? }
   # Или один email может использоваться только один раз (если анонимная подписка)
   validates :user_email, uniqueness: { scope: :event_id }, unless: -> { user.present? }
+  validate :email_is_free, unless: -> { user.present? }
 
   # Если есть юзер, выдаем его имя,
   # если нет – дергаем исходный метод
@@ -35,5 +36,13 @@ class Subscription < ApplicationRecord
     else
       super
     end
+  end
+
+  private
+
+  def email_is_free
+    return unless User.find_by_email(user_email)
+
+    errors.add(:user_email, 'ты охуел чтоли?!' )
   end
 end
