@@ -45,12 +45,12 @@ class Subscription < ApplicationRecord
   def email_is_free
     return unless User.find_by_email(user_email)
 
-    errors.add(:user_email, 'ты охуел чтоли?!' )
+    errors.add(:user_email, 'ты охуел что ли?!' )
   end
 
   def subscription_owner
-    return unless create_user.id == Event.find_by_user_id(user_id)
+    return unless user.id == event.user_id_was
 
-    errors.add(:user_id, 'Идиот, это же твое событие, да?!')
+    errors.add(:user_email, 'Это твое событие дурик?!' )
   end
 end
