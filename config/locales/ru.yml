@@ -3,9 +3,9 @@ ru:
   activerecord:
     # Перевод названия моделей
     models:
-      user: 'Пользователь'
-      event: 'Событие'
-
+      user: 'Пользователь:'
+      event: 'Событие:'
+      subscription: 'Подписка:'
     # Перевод атрибутов моделей
     attributes:
       user:
@@ -18,6 +18,12 @@ ru:
         address: 'Место проведения'
         datetime: 'Дата и время'
         description: 'Описание'
+      subscription:
+        user_email: 'Email'
+        email_is_free:
+          user_email: 'пользователь c такой почтой уже существует'
+        subscription_owner:
+          user_id: 'Это твое событие, ты и так пойдешь)'
   controllers:
     events:
       created: 'Вы создали новое мероприятие'
