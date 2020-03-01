@@ -43,10 +43,10 @@ class Subscription < ApplicationRecord
   private
 
   def email_is_free
-    errors.add(:user_email, 'уже зарегестрирован такой пользователь' ) if User.find_by(email: user_email)
+    errors.add(:user_email, 'уже зарегестрирован такой пользователь') if User.find_by(email: user_email)
   end
 
   def subscription_owner
-    errors.add(:user_email, 'Это твое событие, ты и так пойдешь)' ) if user.id == event.user_id_was
+    errors.add(:user, 'Это твое событие, ты и так пойдешь)') if user.id == event.user_id_was
   end
 end
