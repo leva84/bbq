@@ -47,6 +47,6 @@ class Subscription < ApplicationRecord
   end
 
   def subscription_owner
-    errors.add(:user_id) if user.id == event.user_id_was
+    errors.add(:user_id, :subscription_owner) if user.id == event.user_id_was
   end
 end

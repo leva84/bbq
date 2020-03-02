@@ -13,7 +13,7 @@ ru:
             user_email:
               invalid: 'пользователь c такой почтой уже существует'
             user_id:
-              invalid: 'ты и так пойдешь)'
+              subscription_owner: 'ты и так пойдешь)'
     # Перевод атрибутов моделей
     attributes:
       user:
