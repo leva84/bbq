@@ -43,12 +43,10 @@ class Subscription < ApplicationRecord
   private
 
   def email_is_free
-    errors.add(:user_email, (I18n.t'activerecord.attributes.subscription.email_is_free.user_email')) if
-        User.find_by(email: user_email)
+    errors.add(:user_email) if User.find_by(email: user_email)
   end
 
   def subscription_owner
-    errors.add(:user_id, (I18n.t'activerecord.attributes.subscription.subscription_owner.user_id')) if
-        user.id == event.user_id_was
+    errors.add(:user_id) if user.id == event.user_id_was
   end
 end
