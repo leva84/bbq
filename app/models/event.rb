@@ -5,6 +5,7 @@ class Event < ApplicationRecord
 
   has_many :comments, dependent: :destroy
   has_many :subscriptions, dependent: :destroy
+  has_many :photos, dependent: :destroy
 
   # Чтобы Рельсы понимали, какой именно класс будет лежать
   # в модели subscribers, надо указать source
