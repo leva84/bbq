@@ -21,6 +21,10 @@ gem 'listen'
 
 gem 'twitter-bootstrap-rails'
 
+gem 'carrierwave'
+
+gem 'rmagick'
+
 group :production do
   gem 'pg'
 end
