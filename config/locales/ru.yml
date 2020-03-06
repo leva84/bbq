@@ -6,6 +6,7 @@ ru:
       user: 'Пользователь:'
       event: 'Событие:'
       subscription: 'Подписка:'
+      photo: 'Фотография'
     errors:
       models:
         subscription:
@@ -29,6 +30,8 @@ ru:
         description: 'Описание'
       subscription:
         user_email: 'Email'
+      photo:
+        photo: 'Фотография'
   controllers:
     events:
       created: 'Вы создали новое мероприятие'
@@ -44,6 +47,10 @@ ru:
       created: 'Вы подписаны на это событие'
       destroyed: 'Участник отписан'
       error: 'Подписка/отписка не сработала'
+    photos:
+      error: 'Что-то не так с фоткой'
+      created: 'Вы добавили фотографию к событию'
+      destroyed: 'Вы удалили фотку'
 
   app:
     name: 'НашиСобытия'
