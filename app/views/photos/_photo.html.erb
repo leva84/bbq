@@ -7,8 +7,7 @@
     <%= link_to(
             fa_icon(''),
             event_photo_path(photo.event, photo),
-            method: :delete,
-            data: {confirm: t('.destroy_confirm')}
+            method: :delete, data: {confirm: t('.destroy_confirm')}
         ) %>
   <% end %>
 </div>
