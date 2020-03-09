@@ -4,9 +4,10 @@
   <% else %>
     <em><%= subscription.user_name %></em>
   <% end %>
+
   <% if current_user_can_edit?(subscription) %>
     <%= link_to(
-            fa_icon('times'),
+            fa_icon(''),
             event_subscription_path(subscription.event, subscription),
             method: :delete,
             data: {confirm: t('.destroy_confirm')}

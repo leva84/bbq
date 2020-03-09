@@ -4,6 +4,8 @@ class Photo < ApplicationRecord
 
   # Добавляем uploader, чтобы заработал carrierwave
   mount_uploader :photo, PhotoUploader
+  
+  validates :photo, presence: true
 
   # Scope нужен, чтобы отделить реальные фотки от болванки,
   # которую мы прописали в контроллере событий
