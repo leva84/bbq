@@ -7,9 +7,9 @@ if Rails.env.production?
         provider:              'AWS',
         aws_access_key_id:     ENV['S3_ACCESS_KEY'],
         aws_secret_access_key: ENV['S3_SECRET_KEY'],
-        host:                  ENV['bbq-1.s3.eu-north-1.amazonaws.com']
     }
 
+    config.host           = ENV['bbq-1.s3.eu-north-1.amazonaws.com']
     config.fog_directory  = ENV['S3_BUCKET_NAME']
   end
 end
