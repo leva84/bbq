@@ -32,6 +32,8 @@ ru:
         user_email: 'Email'
       photo:
         photo: 'Фотография'
+      comment:
+        comment: 'Коментарий'
   controllers:
     events:
       created: 'Вы создали новое мероприятие'
@@ -64,3 +66,18 @@ ru:
   photos:
     photo:
       destroy_confirm: 'Вы уверены, что хотите удалить это фото?'
+  event_mailer:
+    comment:
+      title: 'Новый комментарий'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'
+    subscription:
+      title: 'Новая подписка'
+      name: 'Имя'
+      email: 'Email'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'
