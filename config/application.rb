@@ -34,5 +34,7 @@ module Bbq
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    config.action_mailer.asset_host = 'localhost:3000'
   end
 end
