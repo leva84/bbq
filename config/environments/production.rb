@@ -96,7 +96,7 @@ Rails.application.configure do
 
   # Базовый URL сайта для правильных ссылок в письмах
   # ПРОПИСЫВАЙТЕ свой!
-  config.action_mailer.default_url_options = {host: 'megabbq.herokuapp.com'}
+  config.action_mailer.default_url_options = {host: 'qoolbbq.herokuapp.com'}
 
   # Ошибки рассылки юзеру не показываем
   config.action_mailer.raise_delivery_errors = false
