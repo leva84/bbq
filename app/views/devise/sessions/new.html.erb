@@ -1,11 +1,11 @@
-<h2>Вход в систему</h2>
+<h2 class="mb-5 display-4">Вход в систему</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-group">
     <svg class="bi bi-envelope-fill" width="1.5em" height="1.5em" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
       <path d="M2.05 5.555L10 10.414l7.95-4.859A2 2 0 0016 4H4a2 2 0 00-1.95 1.555zM18 6.697l-5.875 3.59L18 13.743V6.697zm-.168 8.108l-6.675-3.926-1.157.707-1.157-.707-6.675 3.926A2 2 0 004 16h12a2 2 0 001.832-1.195zM2 13.743l5.875-3.456L2 6.697v7.046z"/>
     </svg>
-    <%= f.label :email %><br />
+    <em class="h3"><%= f.label :email %></em>
     <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
   </div>
 
@@ -14,7 +14,7 @@
       <rect width="11" height="9" x="4.5" y="8" rx="2"/>
       <path fill-rule="evenodd" d="M6.5 5a3.5 3.5 0 117 0v3h-1V5a2.5 2.5 0 00-5 0v3h-1V5z" clip-rule="evenodd"/>
     </svg>
-    <%= f.label 'Пароль' %><br />
+    <em class="h3"><%= f.label 'Пароль' %></em>
     <%= f.password_field :password, autocomplete: "current-password", class: 'form-control' %>
   </div>
 

@@ -1,4 +1,4 @@
-<h2>Редактировать профиль <%= current_user.name %></h2>
+<h2 class="mb-5 display-4">Редактировать профиль <%= current_user.name %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -7,7 +7,7 @@
     <svg class="bi bi-envelope-fill" width="1.5em" height="1.5em" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
       <path d="M2.05 5.555L10 10.414l7.95-4.859A2 2 0 0016 4H4a2 2 0 00-1.95 1.555zM18 6.697l-5.875 3.59L18 13.743V6.697zm-.168 8.108l-6.675-3.926-1.157.707-1.157-.707-6.675 3.926A2 2 0 004 16h12a2 2 0 001.832-1.195zM2 13.743l5.875-3.456L2 6.697v7.046z"/>
     </svg>
-    <%= f.label :email %> <i>(адрес электронной почты)</i><br />
+    <em class="h3"><%= f.label :email %> <i>(адрес электронной почты)</i></em>
     <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
   </div>
 
@@ -19,7 +19,7 @@
     <svg class="bi bi-lock" width="1.5em" height="1.5em" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
       <path fill-rule="evenodd" d="M13.655 9H6.333c-.264 0-.398.068-.471.121a.73.73 0 00-.224.296 1.626 1.626 0 00-.138.59V15c0 .342.076.531.14.635.064.106.151.18.256.237a1.122 1.122 0 00.436.127l.013.001h7.322c.264 0 .398-.068.471-.121a.73.73 0 00.224-.296 1.627 1.627 0 00.138-.59V10c0-.342-.076-.531-.14-.635a.658.658 0 00-.255-.237 1.123 1.123 0 00-.45-.128zm.012-1H6.333C4.5 8 4.5 10 4.5 10v5c0 2 1.833 2 1.833 2h7.334c1.833 0 1.833-2 1.833-2v-5c0-2-1.833-2-1.833-2zM6.5 5a3.5 3.5 0 117 0v3h-1V5a2.5 2.5 0 00-5 0v3h-1V5z" clip-rule="evenodd"/>
     </svg>
-    <%= f.label 'Пароль' %> <i>(оставьте пустым, если вы не хотите его менять)</i><br />
+    <em class="h3"><%= f.label 'Пароль' %> <i>(оставьте пустым, если вы не хотите его менять)</i></em>
     <%= f.password_field :password, autocomplete: "new-password", class: 'form-control' %>
     <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> символов минимум)</em>
@@ -31,7 +31,7 @@
       <rect width="11" height="9" x="4.5" y="8" rx="2"/>
       <path fill-rule="evenodd" d="M6.5 5a3.5 3.5 0 117 0v3h-1V5a2.5 2.5 0 00-5 0v3h-1V5z" clip-rule="evenodd"/>
     </svg>
-    <%= f.label 'Повторите пароль' %><br />
+    <em class="h3"><%= f.label 'Повторите пароль' %></em>
     <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control' %>
   </div>
 
@@ -40,7 +40,7 @@
       <rect width="11" height="9" x="4.5" y="8" rx="2"/>
       <path fill-rule="evenodd" d="M6.5 5a3.5 3.5 0 117 0v3h-1V5a2.5 2.5 0 00-5 0v3h-1V5z" clip-rule="evenodd"/>
     </svg>
-    <%= f.label 'Введите текущий пароль' %> <i>(нам нужен ваш текущий пароль для подтверждения ваших изменений)</i><br />
+    <em class="h3"><%= f.label 'Введите текущий пароль' %> <i>(нам нужен ваш текущий пароль для подтверждения ваших изменений)</i></em>
     <%= f.password_field :current_password, autocomplete: "current-password", class: 'form-control' %>
   </div>
 

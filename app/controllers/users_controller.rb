@@ -9,6 +9,16 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def create
+    @user = User.new(user_params)
+
+    if @user.save
+      redirect_to @user, notice: I18n.t('controllers.users.updated')
+    else
+      render 'devise/registrations/new'
+    end
+  end
+
   # GET /users/1/edit
   def edit; end
 
