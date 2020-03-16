@@ -75,6 +75,8 @@ ru:
       event: 'Событие'
       datetime: 'Состоится'
       owner: 'Организатор'
+      relevance_true: 'Состоится'
+      relevance_false: 'Состоялось'
     subscription:
       title: 'Новая подписка'
       name: 'Имя'
@@ -83,9 +85,13 @@ ru:
       event: 'Событие'
       datetime: 'Состоится'
       owner: 'Организатор'
+      relevance_true: 'Состоится'
+      relevance_false: 'Состоялось'
     photo:
       title: 'Новое фото'
       author: 'Автор'
       event: 'Событие'
       datetime: 'Состоится'
       owner: 'Организатор'
+      relevance_true: 'Состоится'
+      relevance_false: 'Состоялось'
