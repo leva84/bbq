@@ -45,4 +45,13 @@ module ApplicationHelper
       asset_path('user.png')
     end
   end
+
+
+  def relevance(event)
+    if Time.now > event.datetime
+      t '.relevance_false'
+    else
+      t '.relevance_true'
+    end
+  end
 end

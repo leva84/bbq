@@ -7,6 +7,6 @@ Email: <%=  @email %>
 ----------------------
 
 Событие: <%= link_to (@event.title), event_url(@event) %>
-<%= @relevance %>:
+<%= relevance(@event) %>:
 <%= l @event.datetime %>
 Организатор: <%= @event.user.name %>
