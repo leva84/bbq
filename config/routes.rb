@@ -12,4 +12,6 @@ Rails.application.routes.draw do
     post :show, on: :member
   end
   resources :users, only: %i[show edit update]
+
+  mount LetterOpenerWeb::Engine, at: '/letter_opener' if Rails.env.development?
 end

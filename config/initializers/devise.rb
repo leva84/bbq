@@ -19,7 +19,7 @@ Devise.setup do |config|
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
   #config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
-  config.mailer_sender = 'admin@qoolbbq.herokuapp.com'
+  #config.mailer_sender = 'admin@qoolbbq.herokuapp.com'
   #config.mailer_sender = 'mail-to-send@from.com'
 
   # Configure the class responsible to send e-mails.
@@ -297,5 +297,8 @@ Devise.setup do |config|
 
   # When set to false, does not sign a user in automatically after their password is
   # changed. Defaults to true, so a user is signed in automatically after changing a password.
-  # config.sign_in_after_change_password = true
+  # config.sign_in_after_change_password =
+
+  config.mailer_sender = 'foo@bar.com'
+  config.mailer        = Devise.mailer
 end
