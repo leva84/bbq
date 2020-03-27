@@ -10,8 +10,6 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
  */
 
 /* Buffers */
@@ -54,3 +52,31 @@
 .thumbnail-inner {
   padding: 20px 4px 4px;
 }
+
+.thumb img {
+  -webkit-filter: grayscale(0);
+  filter: none;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+.thumb img:hover {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+
+.thumb {
+  padding: 5px;
+}
+
+.thumb_height {
+  height: 80%;
+}
+
+@import "bootstrap";
+@import "events";
+@import "user";
+@import "bootstrap-grid";
+@import "bootstrap-reboot";

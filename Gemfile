@@ -21,7 +21,7 @@ gem 'bootsnap'
 
 gem 'listen'
 
-gem 'twitter-bootstrap-rails'
+gem 'bootstrap', '~> 4.4.1'
 
 gem 'carrierwave'
 
