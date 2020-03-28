@@ -31,10 +31,14 @@ ru:
         pincode: 'Пин-Код доступа'
       subscription:
         user_email: 'Email'
+        user_name: 'Имя'
       photo:
         photo: 'Фотография'
+        photos: 'Фотографии'
       comment:
         comment: 'Коментарий'
+        comments: 'Коментарии'
+        user_name: 'Имя'
   controllers:
     events:
       created: 'Вы создали новое мероприятие'

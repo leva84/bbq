@@ -1,12 +1,12 @@
-<span class="user">
+<div class="w-75 list-inline m-2">
   <span class="user-avatar">
     <%= image_tag(user_avatar(user), class: 'img-icon') %>
   </span>
-  <span class="user-name">
+  <span>
     <% if request.path == user_path(user) %>
-      <%= user.name %>
+        <%= user.name %>
     <% else %>
       <%= link_to user.name, user_path(user) %>
     <% end %>
   </span>
-</span>
+</div>

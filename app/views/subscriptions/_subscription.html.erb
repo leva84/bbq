@@ -1,16 +1,20 @@
-<span class="subscription">
-  <% if subscription.user.present? %>
-    <%= render partial: 'users/user', object: subscription.user %>
-  <% else %>
-    <em><%= subscription.user_name %></em>
-  <% end %>
+<div class="row">
+  <span class="w-75 col-9">
+    <% if subscription.user.present? %>
+      <%= render partial: 'users/user', object: subscription.user %>
+    <% else %>
+      <%= subscription.user_name %>
+    <% end %>
+  </span>
 
-  <% if current_user_can_edit?(subscription) %>
-    <%= link_to(
-            fa_icon(''),
-            event_subscription_path(subscription.event, subscription),
-            method: :delete,
-            data: {confirm: t('.destroy_confirm')}
-        ) %>
+  <span class="col-1 pt-2">
+    <% if current_user_can_edit?(subscription) %>
+      <%= link_to(
+              fa_icon(''),
+              event_subscription_path(subscription.event, subscription),
+              method: :delete,
+              data: {confirm: t('.destroy_confirm')}
+          ) %>
   <% end %>
-</span>
+  </span>
+</div>
