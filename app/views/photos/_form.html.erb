@@ -1,12 +1,15 @@
-<%= form_for [@event, photo], html: { multipart: true } do |f| %>
-  <%= render partial: 'partials/form_errors', locals: {model: photo} %>
+<div class="w-100 shadow border bg-light pl-5 pr-3 pb-3 mr-4">
+  <%= form_for [@event, photo], html: { multipart: true } do |f| %>
+    <%= render partial: 'partials/form_errors', locals: {model: photo} %>
 
-  <div class="form-group">
-    <%= f.label :photo %>
-    <%= f.file_field :photo %>
-  </div>
+    <div class="h1"><%= f.label :photos %></div>
+    <div class="form-group">
+      Добавить <%= f.label :photos %><br/>
+      <%= f.file_field :photo %><br/>
+    </div>
 
-  <div class="actions">
-    <%= f.submit 'Загрузить', class: 'btn btn-primary' %>
-  </div>
-<% end %>
+    <div class="actions">
+      <%= f.submit 'Загрузить', class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+</div>

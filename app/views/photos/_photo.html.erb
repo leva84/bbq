@@ -1,13 +1,18 @@
-<div class="event-photo buffer-both">
-  <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url %>
+<div class="m-3 border thumb shadow p-3 col-lg-3 col-md-4 col-5 text-center">
+  <div class="text-center thumb_height">
+      <% image_title = "Добавил #{render partial: 'users/user', object: photo.user}" %>
 
-  Добавил <%= render partial: 'users/user', object: photo.user %>
-
-  <% if current_user_can_edit?(photo) && photo.event.present? %>
-    <%= link_to(
-            fa_icon(''),
-            event_photo_path(photo.event, photo),
-            method: :delete, data: {confirm: t('.destroy_confirm')}
-        ) %>
-  <% end %>
+      <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url, data: {
+          toggle: 'lightbox', title: image_title, gallery: 'event-photos', class: 'img-fluid shadow p-3'
+      } %>
+  </div>
+  <div class="text-center">
+    <% if current_user_can_edit?(photo) && photo.event.present? %>
+      <%= link_to(
+              fa_icon(''),
+              event_photo_path(photo.event, photo),
+              method: :delete, data: {confirm: t('.destroy_confirm')}
+          ) %>
+    <% end %>
+  </div>
 </div>

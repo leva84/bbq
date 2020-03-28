@@ -1,19 +1,24 @@
-<%= form_for [@event, comment] do |f| %>
-  <%= render partial: 'partials/form_errors', locals: {model: comment} %>
+<div class="w-100 shadow border bg-light mr-4 p-3">
+  <%= form_for [@event, comment] do |f| %>
+    <%= render partial: 'partials/form_errors', locals: {model: comment} %>
 
-  <div class="form-group">
-    <%= f.label :comment %>
-    <%= f.text_area :body, class: 'form-control' %>
-  </div>
-
-  <% unless user_signed_in? %>
+    <div class="h1 text-center">
+      <%= f.label :comments %>
+    </div>
     <div class="form-group">
-      <%= f.label :user_name %>
-      <%= f.text_field :user_name, class: 'form-control' %>
+      <%= f.label :comment %>
+      <%= f.text_area :body, class: 'form-control' %>
+    </div>
+
+    <% unless user_signed_in? %>
+      <div class="form-group">
+        <%= f.label :user_name %>
+        <%= f.text_field :user_name, class: 'form-control' %>
+      </div>
+    <% end %>
+
+    <div class="actions">
+      <%= f.submit 'Отправить', class: 'btn btn-primary' %>
     </div>
   <% end %>
-
-  <div class="actions">
-    <%= f.submit 'Отправить', class: 'btn btn-primary' %>
-  </div>
-<% end %>
+</div>
