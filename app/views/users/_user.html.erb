@@ -1,12 +1,8 @@
-<div class="w-75 list-inline m-2">
-  <span class="user-avatar">
-    <%= image_tag(user_avatar(user), class: 'img-icon') %>
-  </span>
-  <span>
-    <% if request.path == user_path(user) %>
-        <%= user.name %>
-    <% else %>
-      <%= link_to user.name, user_path(user) %>
-    <% end %>
-  </span>
-</div>
+<nobr class="user-avatar">
+<%= image_tag(user_avatar(user), class: 'img-icon') %>
+<% if request.path == user_path(user) %>
+  <p class="pl-3"><%= user.name %></p>
+<% else %>
+  <%= link_to user.name, user_path(user) %>
+<% end %>
+</nobr><br/>
