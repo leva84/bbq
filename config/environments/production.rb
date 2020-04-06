@@ -114,7 +114,7 @@ Rails.application.configure do
       :authentication => :plain,
       :user_name      => ENV['SENDGRID_USERNAME'],
       :password       => ENV['SENDGRID_PASSWORD'],
-      :domain         => 'qoolbbq.heroku.com',
+      :domain         => 'qoolbbq.herokuapp.com',
       :enable_starttls_auto => true
   }
 end
